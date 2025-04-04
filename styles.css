@@ -6,32 +6,73 @@ body {
     background-color: bisque;
 }
 
+/* Header */
 header {
-    background-color:navajowhite;
+    background-color: navajowhite;
     text-align: center;
     padding: 2em 0;
 }
 
- #skills {
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #4caf50;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-container img {
+    width: 250px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-container p {
+    flex: 1;
+    line-height: 1.5;
+}
+
+/* Skills Section */
+#skills {
     max-width: 600px;
     margin: auto;
     font-family: Arial, sans-serif;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  .skill {
+}
+
+.skill {
     margin-bottom: 20px;
-  }
-  
-  label {
+}
+
+label {
     font-size: 16px;
     font-weight: bold;
-  }
-  
-  .progress-bar {
+}
+
+.progress-bar {
     background-color: #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
@@ -51,28 +92,15 @@ header {
         width: 0;
     }
     to {
-        width: 100%; 
+        width: 100%;
     }
 }
 
-  .about-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+/* Education Section */
+section h2 {
+    border-bottom: 2px solid grey;
+    padding-bottom: 0.5em;
 }
-
-.about-container img {
-    width: 250px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.about-container p {
-    flex: 1;
-    line-height: 1.5;
-}
-
 
 section {
     padding: 2em;
@@ -80,76 +108,54 @@ section {
     margin: 0 auto;
 }
 
-section h2 {
-    border-bottom: 2px solid grey;
-    padding-bottom: 0.5em;
-}
-
+/* Project Cards */
 .project-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
-  margin: 0;
+    margin: 0;
 }
 
 .project-card a {
-  color: #4caf50;
-  text-decoration: none;
+    color: #4caf50;
+    text-decoration: none;
 }
 
 .project-card a:hover {
-  text-decoration: underline;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  background-color: #333;
-  margin: 0;
+    text-decoration: underline;
 }
 
-nav ul li {
-  flex: 1;
-  text-align: center;
+/* Interests Section */
+p {
+    text-align: justify;
+    line-height: 1.6;
 }
 
-nav ul li a {
-  display: block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-color: #4caf50;
-}
-
+/* Contact Section */
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
 
-
-
-
+/* Media Queries */
 @media (max-width: 768px) {
-  .about-container {
-      flex-direction: column;
-      text-align: center;
-  }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  nav ul {
-      flex-direction: column;
-  }
+    nav ul {
+        flex-direction: column;
+    }
 
-  .project-card {
-      text-align: center;
-  }
+    .project-card {
+        text-align: center;
+    }
 }
